@@ -83,7 +83,7 @@ describe('TreeOrder', () => {
             });
           });
 
-        it('should return an array containing values of the binary tree following In-Order', () => {
+        it('should return an array containing values of the binary tree following Pre-Order', () => {
             expect(preOrderArray(root)).to.eql(['a', 'b', 'd', 'e', 'c', 'f']);
         });
     });

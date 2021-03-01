@@ -3,7 +3,7 @@
 // order, and returns an array containing the values
 // in the order you visited them.
 function bfs(root){
-    // Your code here
+    
 }
 
 module.exports = { bfs };
