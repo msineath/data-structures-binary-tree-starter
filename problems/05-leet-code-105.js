@@ -16,6 +16,18 @@ function buildTree(preorder, inorder) {
     let rightySub = buildTree(rightyPre, rightyIn);
     root.left = leftySub;
     root.right = rightySub;
-    return root;
+
+    if (!root) return [];
+    let q = [root];
+    let final = [];
+    while (q.length) {
+        let current = q[0];
+        if (current.left) q.push(current.left);
+        if (current.right) q.push(current.right);
+        
+        final.push(current.val);
+        q.shift();
+    }
+    return final;
 }
 console.log(buildTree([3, 9, 20, 15, 7], [9, 3, 15, 20, 7]))
