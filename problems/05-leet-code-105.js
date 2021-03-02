@@ -10,7 +10,12 @@ let preorder2 = [-1];
 let inorder2 = [-1];
 
 function buildTree(preorder, inorder) {
+  let root = new TreeNode(preorder[0]);
 
+  if (preorder[1] >= root) {
+    root.right = new TreeNode(preorder[1]);
+  } 
+  
 }
 
 // Input: , inorder = [9,3,15,20,7]
