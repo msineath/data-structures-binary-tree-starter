@@ -4,6 +4,7 @@
 const { TreeNode } = require('./01-tree-node.js');
 
 function buildTree(preorder, inorder) {
+
     let root = new TreeNode(preorder[0]);
     if (preorder.length === 0 && inorder.length === 0)  return [];
     let pivot = inorder.indexOf(preorder[0]);
